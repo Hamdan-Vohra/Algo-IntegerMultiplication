@@ -182,7 +182,7 @@ void intMultiplication::setTape(Vector2u screenSize) {
     int elements = numDigits(num1);
     s1.resize(elements);
     for (int i = elements - 1; i >= 0; i--) {
-        Vector2f position((elements - 1 - i) * boxSizeX + X.getGlobalBounds().width + 20, posY);
+        Vector2f position((i) * boxSizeX + X.getGlobalBounds().width + 20, posY);
         s1[i].initializeTapeContainer(size, position);
         s1[i].initializeTapeValue(to_string(n % 10));
         n /= 10;
@@ -193,7 +193,7 @@ void intMultiplication::setTape(Vector2u screenSize) {
     elements = numDigits(num2);
     s2.resize(elements);
     for (int i = elements - 1; i >= 0; i--) {
-        Vector2f position((elements - 1 - i) * boxSizeX + X.getGlobalBounds().width + 20, s1[0].container.getPosition().y + posY);
+        Vector2f position((i) * boxSizeX + X.getGlobalBounds().width + 20, s1[0].container.getPosition().y + posY);
         s2[i].initializeTapeContainer(size, position);
         s2[i].initializeTapeValue(to_string(n % 10));
         n /= 10;
@@ -230,7 +230,7 @@ void intMultiplication::draw(RenderWindow& window) {
     }
 }
 
-void intMultiplication::display(RenderWindow& window) {
+void intMultiplication::display(RenderWindow& window,int time) {
     while (window.isOpen()) {
         Event event;
         while (window.pollEvent(event)) {
@@ -247,7 +247,7 @@ void intMultiplication::display(RenderWindow& window) {
         window.display();
 
         //simulation time
-        sf::sleep(sf::seconds(1));
+        sf::sleep(sf::seconds(time));
         return;
     }
 }
@@ -276,7 +276,7 @@ void intMultiplication::setNumbers(int num1, int num2) {
 }
 
 void intMultiplication::Algorithm() {
-    RenderWindow window(VideoMode::getDesktopMode(), "Integer Multiplication Visualization", Style::Default);
+    RenderWindow window(VideoMode::getDesktopMode(), "Integer Multiplication Visualization", Style::Close);
 
     // Visualize the input numbers
     setTape(window.getSize());
@@ -356,8 +356,6 @@ long long  intMultiplication::recursiveMultiply(int n1, int n2, RenderWindow& wi
     setZ(X, Y, Z, 3, screenSize);
     visualizeStep(highX, highY, Z[2], window, Color::Green);
 
-
-
     // Combine results
     long long  product = Z[2] * pow(10, 2 * half) + (Z[1] - Z[2] - Z[0]) * pow(10, half) + Z[0];
 
@@ -375,13 +373,16 @@ long long  intMultiplication::recursiveMultiply(int n1, int n2, RenderWindow& wi
 void intMultiplication::visualizeStep(int n1, int n2, long long  result, RenderWindow& window, Color c) {
 
     if (result == -1)
-        cout << "Multiplying " << n1 << " and " << n2 << " = " << "No result" << endl;
+        cout << "Multiplying " << n1 << " and " << n2 << " = " << "Dividing Further" << endl;
     else
         cout << "Multiplying " << n1 << " and " << n2 << " = " << result << endl;
 
     setStepText(window, n1, n2, result, c);
 
     draw(window);
-    display(window);
+    display(window,2);
     window.clear();
+
 }
+
+

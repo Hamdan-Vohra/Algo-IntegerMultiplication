@@ -29,7 +29,7 @@ public:
     //visualization functions
     void visualizeStep(int n1, int n2, long long  result, RenderWindow& window, Color c);
     void draw(RenderWindow&);
-    void display(RenderWindow&);
+    void display(RenderWindow&,int );
 
     //setter functions for GUI
     void setTape(Vector2u screenSize);
@@ -41,4 +41,5 @@ public:
 
     void resetArrowAndResult();
 };
+
 

@@ -64,6 +64,7 @@ C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMulti
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(177,20): warning C4244:         [
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(177,20): warning C4244:             T=unsigned int
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(177,20): warning C4244:         ]
+C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(250,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(299,94): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(299,94): warning C4244:         with
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(299,94): warning C4244:         [
@@ -87,7 +88,7 @@ C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMulti
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(354,30): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(357,26): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
 C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(357,19): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
-C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(362,24): warning C4244: 'initializing': conversion from 'double' to '__int64', possible loss of data
-C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(366,22): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
-C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(382,33): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(360,24): warning C4244: 'initializing': conversion from 'double' to '__int64', possible loss of data
+C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(364,22): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Dell\Desktop\Integer_multiplication\Integer_multiplication\integerMultiplcation.cpp(380,33): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
   Integer_multiplication.vcxproj -> C:\Users\Dell\Desktop\Integer_multiplication\x64\Debug\Integer_multiplication.exe
